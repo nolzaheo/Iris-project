@@ -1,20 +1,21 @@
 <template>
-  <div class="inspector">
+  <div class="attendee">
     <div id="info">
-      <h1>당신은 감독관입니다.</h1>
-      <h1>🔗{{link}}</h1>
+        <h1>당신은 응시자입니다.</h1>
+        <h1>👩‍💻{{sid}}</h1>
+        <h1>🔗{{link}}</h1>
     </div>
   </div>
   <div class="monitors">
   </div>
-  <div>
+  <div id="finishbtn">
     <button type="button" class="finish" @click="goToHome">시험종료</button>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Inspector',
+  name: 'Attendee',
   methods:{
       goToHome(){
         this.$router.push({path:'/'});
@@ -38,10 +39,9 @@ button{
     font-weight: bold;
     border-radius:48px;
     border:0px;
-    margin:10px;
 }
 button:hover{
-  color:black;
-  background-color:white;
+    color:black;
+    background-color:white;
 }
 </style>

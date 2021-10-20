@@ -1,8 +1,6 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/attendee">Attendee</router-link> |
-    <router-link to="/inspector">Inspector</router-link>
+  <div id="logo">
+    <router-link style=text-decoration:none; to="/">Eye<br>Cheatrace.</router-link>
   </div>
   <router-view/>
 </template>
@@ -16,16 +14,20 @@
   color: #2c3e50;
 }
 
-#nav {
+#logo {
   padding: 30px;
-}
-
-#nav a {
+  text-align:left;
+  font-size:30px;
   font-weight: bold;
-  color: #2c3e50;
+  color: #000000;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+#logo a {
+  color: #000000;
+}
+
+body{
+  background-image: url('./assets/background.png');
+  background-size:100%;
 }
 </style>

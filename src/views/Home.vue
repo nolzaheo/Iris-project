@@ -1,18 +1,56 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div id=buttons>
+      <div>
+        <button type="button" class="attendee" @click="goToAttendee">응시자</button>
+      </div>
+      <div>
+        <button type="button" class="inspector" @click="goToInspector">감독관</button>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
   name: 'Home',
-  components: {
-    HelloWorld
-  }
+  methods:{
+      goToAttendee(){
+        this.$router.push({path:'/attendee'});
+      },
+      goToInspector(){
+        this.$router.push({path:'/inspector'});
+      }
+    }
 }
 </script>
+<style scoped>
+  #Home {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  }
+  button{
+    width:190px;
+    height:50px;
+    margin:10px;
+    background-color:black;
+    color:white;
+    font-size:20px;
+    font-weight: bold;
+    border-radius:48px;
+    border:0px;
+    margin:10px;
+  }
+  button:hover{
+    color:black;
+    background-color:white;
+  }
+  #buttons{
+    position:relative;
+    top:200px;
+  }
+  
+</style>
