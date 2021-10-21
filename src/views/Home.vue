@@ -12,14 +12,17 @@
 </template>
 
 <script>
-var link='link4test'
+var link;
 export default {
   name: 'Home',
   data(){
       return{
-          link:'1234'
+          link:'None'
       }
     },
+  mounted(){
+    link=Math.random().toString(36).substr(2,11);
+  },
   methods:{
       goToAttendee(){
         this.$router.push({path:'/attendee'});

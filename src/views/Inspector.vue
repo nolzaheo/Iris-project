@@ -17,7 +17,7 @@ export default {
   name: 'Inspector',
   data(){
     return{
-      link:'no link'
+      link:'None'
     }
   },
   mounted(){

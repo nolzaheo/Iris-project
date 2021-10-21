@@ -18,8 +18,8 @@ export default {
   name: 'Attendee',
   data(){
     return{
-      sid:'no id',
-      link:'no link'
+      sid:'None',
+      link:'None'
     }
   },
   mounted(){
