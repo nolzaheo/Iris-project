@@ -34,7 +34,8 @@ export default {
 h1{
   text-align:left;
   margin-left:20px;
-  font-size:30px;
+  font-size:25px;
+  margin-top:2px;
 }
 button{
     width:190px;
@@ -47,6 +48,9 @@ button{
     border-radius:48px;
     border:0px;
     margin:10px;
+    position:fixed;
+    bottom:30px;
+    right:20px;
 }
 button:hover{
   color:black;

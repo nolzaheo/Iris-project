@@ -17,7 +17,7 @@
 #logo {
   padding: 30px;
   text-align:left;
-  font-size:30px;
+  font-size:40px;
   font-weight: bold;
   color: #000000;
 }
