@@ -2,8 +2,8 @@
   <div class="attendee">
     <div id="info">
         <h1>당신은 응시자입니다.</h1>
-        <h1>👩‍💻{{sid}}</h1>
-        <h1>🔗{{link}}</h1>
+        <h1>👩‍💻 {{sid}}</h1>
+        <h1>🔗 {{link}}</h1>
     </div>
   </div>
   <div class="monitors">
@@ -16,6 +16,16 @@
 <script>
 export default {
   name: 'Attendee',
+  data(){
+    return{
+      sid:'no id',
+      link:'no link'
+    }
+  },
+  mounted(){
+    this.sid=this.$route.params.sid;
+    this.link=this.$route.params.link;
+  },
   methods:{
       goToHome(){
         this.$router.push({path:'/'});

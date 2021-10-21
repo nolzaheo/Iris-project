@@ -12,15 +12,20 @@
 </template>
 
 <script>
-
+var link='link4test'
 export default {
   name: 'Home',
+  data(){
+      return{
+          link:'1234'
+      }
+    },
   methods:{
       goToAttendee(){
         this.$router.push({path:'/attendee'});
       },
       goToInspector(){
-        this.$router.push({path:'/inspector'});
+        this.$router.push({path:'/inspector/'+link});
       }
     }
 }

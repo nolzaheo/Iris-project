@@ -21,15 +21,15 @@
 <script>
   export default {
     name:'attendee',
-    data(){ /*값 데이터베이스에 저장*/
+    data(){
       return{
-          inputsid:[],
-          inputlink:[],
+          inputsid:'',
+          inputlink:'',
       }
     },
     methods:{
       goToAttendeeExam(){
-        this.$router.push({path:'/attendee/exam'});
+        this.$router.push({path:'/attendee/exam/'+this.inputsid+'/'+this.inputlink});
       }
     }
   }

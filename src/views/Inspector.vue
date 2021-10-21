@@ -2,7 +2,7 @@
   <div class="inspector">
     <div id="info">
       <h1>당신은 감독관입니다.</h1>
-      <h1>🔗{{link}}</h1>
+      <h1>🔗 {{link}}</h1>
     </div>
   </div>
   <div class="monitors">
@@ -15,6 +15,14 @@
 <script>
 export default {
   name: 'Inspector',
+  data(){
+    return{
+      link:'no link'
+    }
+  },
+  mounted(){
+    this.link=this.$route.params.link;
+  },
   methods:{
       goToHome(){
         this.$router.push({path:'/'});
