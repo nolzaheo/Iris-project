@@ -5,7 +5,9 @@
         <h1>👩‍💻 {{sid}}<br>🔗 {{link}}</h1>
     </div>
   </div>
-  <div class="monitors">
+  <div id="monitors">
+    <video id="localVideo" autoplay muted playsinline></video>
+    <video id="remoteVideo" autoplay playsinline></video>
   </div>
   <div id="finishbtn">
     <button type="button" class="finish" @click="goToHome">시험종료</button>
@@ -31,7 +33,10 @@ export default {
       }
     }
 }
+
 </script>
+
+
 <style scoped>
 h1{
   text-align:left;
@@ -57,4 +62,9 @@ button:hover{
     color:black;
     background-color:white;
 }
+video {
+  max-width: 100%;
+  width: 320px;
+}
+
 </style>
